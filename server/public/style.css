@@ -44,7 +44,7 @@ body {
   bottom: 5%;
   width: 100%;
   height: 100%;
-  background-image: url("/images/starsbg.jpg");
+  background-image: url("starsbg.jpg");
   background-size: cover;
   opacity: 0.5;
   animation: subtle-pulse 8s ease-in-out infinite;
