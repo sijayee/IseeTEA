@@ -3,27 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Room</title>
+    <title>I SEE TEA | Chat</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="style.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.min.js" integrity="sha512-8ExARjWWkIllMlNzVg7JKq9RKWPlJABQUNq6YvAjE/HobctjH/NA+bSiDMDvouBVjp4Wwnf1VP1OEv7Zgjtuxw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer src="app.js"></script>
 </head>
 
 <body>
+    <div class="starboy-bg">
+        <div class="star-field"></div>
+        <div class="neon-glow top-left"></div>
+        <div class="neon-glow bottom-right"></div>
+        <div class="pixel-overlay"></div>
+    </div>
+    
+    <div class="scan-lines"></div>
+    <div class="pixel-effect"></div>
+    
     <main>
         <div class="chat-container">
             <header class="chat-header">
-                <h1>Chat Room</h1>
+                <div class="header-content">
+                    <div class="pixel-star"></div>
+                    <h1>I SEE TEA</h1>
+                    <div class="pixel-star"></div>
+                </div>
             </header>
             
             <form class="form-join">
                 <div class="form-group">
-                    <input type="text" id="name" maxlength="8" placeholder="Your name" required>
-                    <input type="text" id="room" placeholder="Chat room" required>
-                    <button id="join" type="submit">Join</button>
+                    <div class="input-wrapper">
+                        <i class="fas fa-user input-icon"></i>
+                        <input type="text" id="name" maxlength="8" placeholder="Your name" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <i class="fas fa-door-open input-icon"></i>
+                        <input type="text" id="room" placeholder="Chat room" required>
+                    </div>
+                    <button id="join" type="submit">
+                        <span class="button-content">
+                            <i class="fas fa-bolt"></i>
+                            <span>JOIN</span>
+                        </span>
+                    </button>
                 </div>
             </form>
             
@@ -32,15 +58,25 @@
             </div>
             
             <div class="info-container">
-                <p class="user-list"></p>
-                <p class="room-list"></p>
-                <p class="activity"></p>
+                <div class="info-content">
+                    <p class="user-list"></p>
+                    <p class="room-list"></p>
+                    <p class="activity"></p>
+                </div>
             </div>
             
             <form class="form-msg">
                 <div class="form-group">
-                    <input type="text" id="message" placeholder="Type your message..." required>
-                    <button type="submit">Send</button>
+                    <div class="input-wrapper message-input">
+                        <i class="fas fa-comment input-icon"></i>
+                        <input type="text" id="message" placeholder="Type your message..." required>
+                    </div>
+                    <button type="submit">
+                        <span class="button-content">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>SEND</span>
+                        </span>
+                    </button>
                 </div>
             </form>
         </div>
